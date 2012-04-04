@@ -1,0 +1,5 @@
+A simple GLUT application that generates a maze using the Growing Tree algorithm.
+
+Requires OpenGL and GLUT
+
+to build type 'make'
