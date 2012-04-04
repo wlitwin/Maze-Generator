@@ -168,20 +168,20 @@ bool Maze::Generate()
 	// Choose a random node from the set
 	if (rand() % 2 == 0)
 	{
-		index = rand() % activeset.size();
+		this->index = rand() % activeset.size();
 	} else {
-		index = activeset.size()-1;
+		this->index = activeset.size()-1;
 	}
 	//index = activeset.size()-1;
-	node  = activeset.at(index);
+	this->node  = activeset.at(this->index);
 
 	// Add one of the unvisited neighbors to the set
 	// check left
 
-	int left 	= GetLeftNeighbor(node);
-	int right   = GetRightNeighbor(node);
-	int top 	= GetTopNeighbor(node);
-	int bottom  = GetBottomNeighbor(node);
+	int left 	= GetLeftNeighbor(this->node);
+	int right   = GetRightNeighbor(this->node);
+	int top 	= GetTopNeighbor(this->node);
+	int bottom  = GetBottomNeighbor(this->node);
 
 	bool try_again = false;
 
